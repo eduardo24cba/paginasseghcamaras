@@ -5,6 +5,7 @@ const Main = ({data}) => {
                 <div className="row">
                     <Aside camaras={data}/>
                     <ListCam camaras={data}/>
+                    <WhatsappIcon />
                 </div>
             </div>
         </div>
