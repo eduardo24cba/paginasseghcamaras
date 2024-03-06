@@ -31,8 +31,9 @@ const SectionNavAside = ({dictionary, idSection}) => {
     )
 }
 
-const NavbarItemsAside = (items) => {
-    const [dict] = Object.values(items)
+const NavbarItemsAside = ({items}) => {
+
+    const [dict] = Object.values({items})
     const listSections = dict.map((item, i, array) => {
                 const nameSection = "section_" + Object.keys(item)
                 return (
@@ -50,8 +51,9 @@ const NavbarItemsAside = (items) => {
     )
 }
 
-const NavbarAside = (camaras) => {
-    const [filtro_diseno, filtro_resolucion, filtro_tipo_camara] = filterAside(camaras)
+const NavbarAside = ({camaras}) => {
+    const [filtro_diseno, filtro_resolucion, filtro_tipo_camara] = filterAside({camaras})
+    
     return(
         <nav className="navbar navbar-expand-md navbar-dark bd-dark py-2 text-center m-2">
             <button type="button" className="navbar-toggler border-0 shadow-none" 
@@ -67,19 +69,19 @@ const NavbarAside = (camaras) => {
     )
 }
 
-function filterAside(camaras){
+function filterAside({camaras}){
     let filtro_diseno = {"diseño":{}}
     let filtro_resolucion = {"resolucion":{}}
     let filtro_tipo_camara = {"tipo":{}}
-
-    const [cams] = Object.values(camaras.camaras)
-    cams.map(m => {
+    
+    camaras.map(m => {
 
         updateDict(filtro_diseno, m.diseño)
         updateDict(filtro_resolucion, m.resolucion)
         updateDict(filtro_tipo_camara, m.tipo_de_camara)
         
     })
+
     return [filtro_diseno, filtro_resolucion, filtro_tipo_camara]
 }
 
