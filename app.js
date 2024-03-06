@@ -38,8 +38,8 @@ const App = () => {
         <>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/h" element={<Hola />} />
-            <Route path="*" element={<h3>erroorroroororor</h3>} />
+            <Route path="/hola" element={<Hola />} />
+            <Route path="*" element={<h3>error</h3>} />
         </Routes>
         </>
     )
@@ -72,7 +72,7 @@ return(
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
-    <BrowserRouter basename="/">
+    <BrowserRouter>
         <App />
     </BrowserRouter>
 )
