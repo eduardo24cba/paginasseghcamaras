@@ -15,64 +15,31 @@ const OnLoad = () => {
     )
 }
 
-const demora = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout( function(){
-            return resolve(f())
-        }, 5000
-        )
-    }
-
-    )
-}
-
-const Hola = () => <h3>Hola</h3>
-
-const Adios = () => <h3>Chau</h3>
-
-const Home = () => <h2>Home</h2>
-
 const App = () => {
-    console.log(BrowserRouter)
-    return(
-        <>
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/hola" element={<Hola />} />
-            <Route path="*" element={<h3>error</h3>} />
-        </Routes>
-        </>
-    )
-}
-const ListItem = () => {
     const [data, setData] = useState(null)
     
     useEffect(() => {
         async function filterData(){
-            let camaras = await demora()
+            let camaras = await f()
             setData(camaras)
         }
         filterData()
     }, [])
 
-return(
-    data ? 
-        <div className="row">
-                <NavbarTop />
-                <Main data={data}/>
-                <Footer />
-                {/*
-                    <ListCam camaras={data}/>
-                */}
-        </div>
-    
-     : <OnLoad />
-)
+    return(
+        data ?
+        <HashRouter>
+
+        <NavbarTop data={data}/>
+        <Routes>
+            <Route path="/" element={<h1>Pagina principal</h1>}></Route>
+            <Route path="/productos" element={<Main />}></Route>
+            <Route path="*" element={<h1>Todavia no esta lista...</h1>}></Route>
+        </Routes>
+        </HashRouter>
+        : <OnLoad />
+    )
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
-)
+root.render(<App />)
