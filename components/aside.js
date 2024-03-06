@@ -1,4 +1,4 @@
-const Aside = (camaras) => {
+const Aside = ({camaras}) => {
     return(
         <div className="col-12 col-md-3">
             <div className="row flex-column flex-md-row">
