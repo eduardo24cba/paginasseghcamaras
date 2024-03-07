@@ -21,7 +21,7 @@ const CardsCam = ({camara}) => {
                     {campos}
                 </ul>
                 <div className="card-body cartas" id="footer-card">
-                    <a className="card-link link-light" href="#">Ver</a>
+                    <Link to={`/productos/${camara.modelo}`} state={{camara}} className="card-link link-light">Ver</Link>
                 </div>
                 </div>
             </article>
