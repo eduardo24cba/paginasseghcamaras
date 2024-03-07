@@ -15,6 +15,16 @@ const OnLoad = () => {
     )
 }
 
+const EnProceso = () => {
+    return(
+        <div className="row text-center">
+            <div className="col">
+                <h3>En construcción</h3>
+                <img style={{width:"200px", height:"200px"}} src="./static/enconstruccion.png" />
+            </div>
+        </div>
+    )
+}
 const App = () => {
     const [data, setData] = useState(null)
     
@@ -28,14 +38,16 @@ const App = () => {
 
     return(
         data ?
-        <HashRouter>
+        <HashRouter  basename="/">
 
         <NavbarTop data={data}/>
-        <Routes>
-            <Route path="/" element={<h1>Pagina principal</h1>}></Route>
-            <Route path="/productos" element={<Main />}></Route>
-            <Route path="*" element={<h1>Todavia no esta lista...</h1>}></Route>
-        </Routes>
+            <Routes>
+                <Route path="/productos" element={<Main />}></Route>
+                <Route path="/nosotros" element={<EnProceso />}></Route>
+                <Route path="/contacto" element={<EnProceso />}></Route>
+                <Route path="*" element={<h1>Página no encontrada <i className="fa fa-frown-o fa-6"></i></h1>}></Route>
+                <Route path="/productos/:modelo" element={<ViewCamera />}></Route>
+            </Routes>
         </HashRouter>
         : <OnLoad />
     )
