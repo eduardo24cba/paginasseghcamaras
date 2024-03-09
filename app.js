@@ -3,21 +3,6 @@ const {useState, useEffect, useContext, createContext} = React;
 CamaraContext["CamaraContext"] = createContext()
 const ComponentCamaraContext = CamaraContext["CamaraContext"]
 
-const OnLoad = () => {
-    return(
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col d-flex row justify-content-center align-items-center vh-100">
-                    <div className="spinner-border" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    )
-}
-
 const EnProceso = () => {
     return(
         <div className="row text-center">
@@ -28,6 +13,7 @@ const EnProceso = () => {
         </div>
     )
 }
+
 const App = () => {
     const [data, setData] = useState(null)
     
@@ -35,8 +21,6 @@ const App = () => {
         async function filterData(){
             let camaras = await f()
             setData(camaras)
-            //console.log(camaras)
-            //console.log(history)
         }
         filterData()
     }, [])
@@ -45,12 +29,9 @@ const App = () => {
         data ?
             <ComponentCamaraContext.Provider value={data}>            
                 <HashRouter  basename="/">
-
                 <NavbarTop data={data}/>
                     <Routes>
-                        <Route path="/productos" element={<Main />}>
-                        <Route path="*" element={<NotFound />}></Route>    
-                        </Route>
+                        <Route path="/productos" element={<Main />}>                        </Route>
                         <Route path="/nosotros" element={<EnProceso />}></Route>
                         <Route path="/contacto" element={<EnProceso />}></Route>
                         <Route path="*" element={<NotFound />}></Route>

@@ -43,15 +43,16 @@ const CardCamara = ({camara}) => {
 }
 
 const ViewCamera = () => {
+    const {useContext} = React;
     const location = useLocation()
     const [params] = Object.values(useParams())
 
-    const valueContext = CamaraContext["CamaraContext"]
+    const valueContext = useContext(CamaraContext["CamaraContext"])
 
     //recuperamos la data
-    const [camara] = location.state === null ? valueContext._currentValue.filter(
-        cam => cam.modelo === params
-    ): [location.state.camara]
+    const [camara] = location.state === null 
+    ? valueContext.filter( cam => cam.modelo === params)
+    : [location.state.camara]
 
     return (camara ? <CardCamara camara={camara}/> : <NotFound /> )
   }

@@ -6,12 +6,10 @@ const filterDataUnique = (obj, value) => {
            return camara.diseño.toLowerCase() !== value 
         })
     })
-    //console.log(newDict)
 }
 
 const findCamara = (camara, params) => camara.filter(
     cam => cam.modelo === params)
-
 
 //funcion para generar un archivo de texto con los datos de la api
 var textFile = null,
