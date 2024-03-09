@@ -1,4 +1,4 @@
-const {useState, useEffect, useContext, createContext} = React;
+const {useState, useEffect, createContext} = React;
 
 CamaraContext["CamaraContext"] = createContext()
 const ComponentCamaraContext = CamaraContext["CamaraContext"]
