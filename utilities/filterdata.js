@@ -9,6 +9,10 @@ const filterDataUnique = (obj, value) => {
     //console.log(newDict)
 }
 
+const findCamara = (camara, params) => camara.filter(
+    cam => cam.modelo === params)
+
+
 //funcion para generar un archivo de texto con los datos de la api
 var textFile = null,
     makeTextFile = function (text) {

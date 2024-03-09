@@ -1,11 +1,6 @@
-const ViewCamera = () => {
-    const location = useLocation()
+const CardCamara = ({camara}) => {
     const navigate = useNavigate()
-
-    const camara = location.state.camara
-
-    
-    return (
+    return(
         <div className="container">
             <div className="row mt-5">
                 <div className="col-lg-8">
@@ -37,12 +32,26 @@ const ViewCamera = () => {
                             </div>
                         </div>
                     
-                    <button type="button" onClick={() => navigate(-1)} className="btn btn-volver">
+                    <button type="button" onClick={() => location.state === null ? navigate("/productos"): navigate(-1)} className="btn btn-volver">
                         Volver al listado
                     </button>
                     </div>  
                 </div>
             </div>
         </div>
-      )
+    )
+}
+
+const ViewCamera = () => {
+    const location = useLocation()
+    const [params] = Object.values(useParams())
+
+    const valueContext = CamaraContext["CamaraContext"]
+
+    //recuperamos la data
+    const [camara] = location.state === null ? valueContext._currentValue.filter(
+        cam => cam.modelo === params
+    ): [location.state.camara]
+
+    return (camara ? <CardCamara camara={camara}/> : <NotFound /> )
   }

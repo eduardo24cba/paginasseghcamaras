@@ -9,3 +9,8 @@ const Navigate = ReactRouterDOM.Navigate
 const HashRouter = ReactRouterDOM.HashRouter
 const useLocation = ReactRouterDOM.useLocation
 const useNavigate = ReactRouterDOM.useNavigate
+const useParams = ReactRouterDOM.useParams
+
+//debemos usar un diccionario para agregar el contexto dado que
+//no nos permite importar en archivos jsx, al menos ami
+const CamaraContext = {}

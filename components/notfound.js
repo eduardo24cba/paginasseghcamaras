@@ -1,0 +1,1 @@
+const NotFound = () => <h1>Página no encontrada <i className="fa fa-frown-o fa-6"></i></h1>

@@ -1,6 +1,15 @@
+
 const Main = () => {
+    const {useContext} = React
+
+    const valueContext = CamaraContext["CamaraContext"]
+
     const location = useLocation()
-    const data = location.state.data
+    
+
+    //la location es null cuando no viene apretando por medio del link
+    //si eso sucede, recuperamos datos a travez del contexto
+    const data = location.state === null ? valueContext._currentValue : location.state.data
 
     return(
         <div className="col-12">

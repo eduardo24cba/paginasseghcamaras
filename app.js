@@ -1,4 +1,7 @@
-const {useState, useEffect} = React;
+const {useState, useEffect, useContext, createContext} = React;
+
+CamaraContext["CamaraContext"] = createContext()
+const ComponentCamaraContext = CamaraContext["CamaraContext"]
 
 const OnLoad = () => {
     return(
@@ -32,23 +35,29 @@ const App = () => {
         async function filterData(){
             let camaras = await f()
             setData(camaras)
+            //console.log(camaras)
+            //console.log(history)
         }
         filterData()
     }, [])
 
     return(
         data ?
-        <HashRouter  basename="/">
+            <ComponentCamaraContext.Provider value={data}>            
+                <HashRouter  basename="/">
 
-        <NavbarTop data={data}/>
-            <Routes>
-                <Route path="/productos" element={<Main />}></Route>
-                <Route path="/nosotros" element={<EnProceso />}></Route>
-                <Route path="/contacto" element={<EnProceso />}></Route>
-                <Route path="*" element={<h1>Página no encontrada <i className="fa fa-frown-o fa-6"></i></h1>}></Route>
-                <Route path="/productos/:modelo" element={<ViewCamera />}></Route>
-            </Routes>
-        </HashRouter>
+                <NavbarTop data={data}/>
+                    <Routes>
+                        <Route path="/productos" element={<Main />}>
+                        <Route path="*" element={<NotFound />}></Route>    
+                        </Route>
+                        <Route path="/nosotros" element={<EnProceso />}></Route>
+                        <Route path="/contacto" element={<EnProceso />}></Route>
+                        <Route path="*" element={<NotFound />}></Route>
+                        <Route path="/productos/:modelo" element={<ViewCamera />}></Route>
+                    </Routes>
+                </HashRouter>
+            </ComponentCamaraContext.Provider>
         : <OnLoad />
     )
 }
