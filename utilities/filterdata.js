@@ -11,6 +11,19 @@ const filterDataUnique = (obj, value) => {
 const findCamara = (camara, params) => camara.filter(
     cam => cam.modelo === params)
 
+const filterCamaras = (listCams, key, value) => {
+
+    const cams = Object.values(listCams)
+    //console.log(cams)
+    
+    let resultCams = []
+    for(cam of cams){
+        Object.entries(cam).forEach(ck => {
+            if(ck[0]=== normalizeString(key).toLowerCase() && value === ck[1])resultCams.push(cam)
+        })
+    }
+    return resultCams
+}
 //funcion para generar un archivo de texto con los datos de la api
 var textFile = null,
     makeTextFile = function (text) {
