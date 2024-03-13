@@ -31,11 +31,12 @@ const App = () => {
                 <HashRouter  basename="/">
                 <NavbarTop data={data}/>
                     <Routes>
-                        <Route path="/productos" element={<Main />}>                        </Route>
+                        <Route path="/productos" element={<Main />}></Route>
                         <Route path="/nosotros" element={<EnProceso />}></Route>
                         <Route path="/contacto" element={<EnProceso />}></Route>
                         <Route path="*" element={<NotFound />}></Route>
-                        <Route path="/productos/:modelo" element={<ViewCamera />}></Route>
+                        <Route path="/productos/camaras/:modelo" element={<ViewCamera />}></Route>
+                        <Route path="/productos/camaras/filtro/:filter" element={<FilterCamara />}></Route>
                     </Routes>
                 </HashRouter>
             </ComponentCamaraContext.Provider>
