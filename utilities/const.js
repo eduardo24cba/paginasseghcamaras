@@ -1,5 +1,5 @@
 const ITEMS_NAV_TOP = ["Productos", "Nosotros", "Contacto"]
-const FIELDS_CARD = ["diseño", "resolucion", "conectividad", "marca"]
+const FIELDS_CARD = ["diseño", "resolucion", "conectividad", "marca", "tipo_de_camara"]
 
 const Routes = ReactRouterDOM.Routes
 const Route = ReactRouterDOM.Route
