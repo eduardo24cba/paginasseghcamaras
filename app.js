@@ -1,48 +1,39 @@
-const {useState, useEffect, createContext} = React;
-
-CamaraContext["CamaraContext"] = createContext()
-const ComponentCamaraContext = CamaraContext["CamaraContext"]
-
-const EnProceso = () => {
-    return(
-        <div className="row text-center">
-            <div className="col">
-                <h3>En construcción</h3>
-                <img style={{width:"200px", height:"200px"}} src="./static/enconstruccion.png" />
-            </div>
-        </div>
-    )
-}
+const {Provider} = ReactRedux;
 
 const App = () => {
+    const {useState, useEffect} = React;
     const [data, setData] = useState(null)
+    const {useSelector} = ReactRedux
+    const camaras = useSelector((state) => state.camaras)
+        
     
     useEffect(() => {
-        async function filterData(){
-            let camaras = await f()
-            setData(camaras)
-        }
-        filterData()
+        setData(camaras)
     }, [])
 
     return(
-        data ?
-            <ComponentCamaraContext.Provider value={data}>            
-                <HashRouter  basename="/">
-                <NavbarTop data={data}/>
+        data ?  
+            <HashRouter  basename="/">
+                <NavbarTop/>
                     <Routes>
+                        <Route path="/" element={<Principal />}></Route>
                         <Route path="/productos" element={<Main />}></Route>
-                        <Route path="/nosotros" element={<EnProceso />}></Route>
-                        <Route path="/contacto" element={<EnProceso />}></Route>
+                        <Route path="/nosotros" element={<Nosotros />}></Route>
+                        <Route path="/contacto" element={<Contacto />}></Route>
                         <Route path="*" element={<NotFound />}></Route>
                         <Route path="/productos/camaras/:modelo" element={<ViewCamera />}></Route>
                         <Route path="/productos/camaras/filtro/:filter" element={<FilterCamara />}></Route>
                     </Routes>
-                </HashRouter>
-            </ComponentCamaraContext.Provider>
+            </HashRouter>
         : <OnLoad />
     )
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<App />)
+root.render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </React.StrictMode>
+)
