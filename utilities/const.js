@@ -14,3 +14,6 @@ const useParams = ReactRouterDOM.useParams
 //debemos usar un diccionario para agregar el contexto dado que
 //no nos permite importar en archivos jsx, al menos ami
 const CamaraContext = {}
+
+const ReactRedux = window.ReactRedux
+const RTK = window.RTK

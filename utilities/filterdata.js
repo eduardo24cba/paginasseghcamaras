@@ -17,7 +17,7 @@ const filterCamaras = (listCams, key, value) => {
     //console.log(cams)
     
     let resultCams = []
-    for(cam of cams){
+    for(let cam of cams){
         Object.entries(cam).forEach(ck => {
             if(ck[0]=== normalizeString(key).toLowerCase() && value === ck[1])resultCams.push(cam)
         })
