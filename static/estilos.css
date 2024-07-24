@@ -140,7 +140,7 @@ html, body {
  
   /*   background-size:100% auto; */
   #portada{
-    background-image: url('/static/camara_de_seguridad.jpg');
+    background-image: url('https://eduardo24cba.github.io/paginasseghcamaras/static/camara_de_seguridad.jpg');
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
