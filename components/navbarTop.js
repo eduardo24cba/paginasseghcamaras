@@ -1,11 +1,11 @@
-const NavbarOptionsTop = ({options, data}) => {
+const NavbarOptionsTop = ({options}) => {
     const listItems = options.map((option, i, array) => {
         const url = "/" + option.toLowerCase()
         return(
             <li key={option} className="nav-item" style={{borderBottom: "1px"}}>
                 {option.toLowerCase() === "productos" ? 
-                    <Link className="links-barra" to={url} state={{data}}>{option}</Link>: 
-                    <Link className="links-barra" to={url} state={{data}}>{option}</Link> }
+                    <Link className="links-barra" to={url} >{option}</Link>: 
+                    <Link className="links-barra" to={url} >{option}</Link> }
                 { i+1 !== array.length && <hr className="d-lg-none d-sm-block my-2 ms-3 bg-light" />}
             </li>
         )
@@ -19,10 +19,10 @@ const NavbarOptionsTop = ({options, data}) => {
     )
 }
 
-const NavbarItemsTop = ({data}) => {
+const NavbarItemsTop = () => {
     return(
         <>
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
             <h3>
                 <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40}
                      viewBox="0 0 24 24" fill="none" stroke="#85EA92" strokeWidth={2}
@@ -31,7 +31,7 @@ const NavbarItemsTop = ({data}) => {
                 </svg>
                 Ssegh
             </h3>
-        </a>
+        </Link>
         <button id="button-toggler" className="navbar-toggler custom-toggler shadow-none"
                 type="button" data-bs-toggle="collapse" data-bs-target="#navTop" aria-controls="navTop"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -39,18 +39,18 @@ const NavbarItemsTop = ({data}) => {
             <span className="my-1 mx-2 span-close d-none" id="icon-close">X</span>
         </button>
         <div className="collapse navbar-collapse flex-row-reverse" id="navTop">
-            <NavbarOptionsTop options={ITEMS_NAV_TOP} data={data} />
+            <NavbarOptionsTop options={ITEMS_NAV_TOP} />
         </div>
         </>
     )
 }
 
-const NavbarTop = ({data}) => {
+const NavbarTop = () => {
     return (
         <div className="col-12">
             <header className="barra">
                 <nav className="navbar navbar-expand-lg">
-                    <NavbarItemsTop data={data}/>
+                    <NavbarItemsTop/>
                 </nav>
             </header>
         </div>

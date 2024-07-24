@@ -1,4 +1,5 @@
 const CardCamara = ({camara}) => {
+    const {useNavigate} = ReactRouterDOM
     const navigate = useNavigate()
     return(
         <div className="container">
@@ -15,24 +16,24 @@ const CardCamara = ({camara}) => {
                   
                 <div className="col-lg-4">
                     <div className="d-flex-column">
-                        <p className="text-modelo">Modelo: {camara.modelo}</p>
-                        <p className="text-modelo">Diseño: {camara.diseño}</p>
-                        <p className="text-modelo">Resolucion: {camara.resolucion}</p>
-                        <p className="text-modelo">Conectividad: {camara.conectividad}</p>
-                        <p className="text-modelo">Dimensiones: {camara.dimensiones}</p>
-                        <p className="text-modelo">Descripcion: <br/><br/> {camara.descripcion}</p>
+                        <p className="text-modelo"> <strong>Modelo: </strong>{camara.modelo}</p>
+                        <p className="text-modelo"> <strong>Diseño: </strong>{camara.diseño}</p>
+                        <p className="text-modelo"> <strong>Resolucion:</strong>{camara.resolucion}</p>
+                        <p className="text-modelo"> <strong>Conectividad: </strong>{camara.conectividad}</p>
+                        <p className="text-modelo"> <strong>Dimensiones: </strong>{camara.dimensiones}</p>
+                        <p className="text-modelo"> <strong>Descripcion: </strong><br/><br/> {camara.descripcion}</p>
                         <div className="row">
                             <div className="col d-flex justify-content-between" id="share-product">
                                 <div className="share-product-social">
                                     <button type="button" className="btn" id="link_shared">
-                                        <i className="fa fa-share-alt"></i>
-                                        Compartir  
+                                    <i className="fa fa-share-alt"></i>
+                                        &nbsp;Compartir  
                                     </button>
                                 </div>
                             </div>
                         </div>
                     
-                    <button type="button" onClick={() => location.state === null ? navigate("/productos"): navigate(-1)} className="btn btn-volver">
+                    <button type="button" onClick={() => navigate(-1)} className="btn btn-volver">
                         Volver al listado
                     </button>
                     </div>  
@@ -43,16 +44,16 @@ const CardCamara = ({camara}) => {
 }
 
 const ViewCamera = () => {
-    const {useContext} = React;
-    const location = useLocation()
-    const [params] = Object.values(useParams())
+    const {useDispatch, useSelector} = ReactRedux
+    const {useParams} = ReactRouterDOM
+    const {useEffect} = React
+    const dispatch = useDispatch()
+    const [modelo] = Object.values(useParams())
+    const [camara] = useSelector((state) => state.camaras)
 
-    const valueContext = useContext(CamaraContext["CamaraContext"])
-
-    //recuperamos la data
-    const [camara] = location.state === null 
-    ? valueContext.filter( cam => cam.modelo === params)
-    : [location.state.camara]
-
-    return (camara ? <CardCamara camara={camara}/> : <NotFound /> )
+    useEffect( () => {
+        dispatch(filterModelo(modelo))
+    }, [dispatch])
+    
+    return (camara.length > 1 ? <p>loading...</p> : <CardCamara camara={camara}/>)
   }
