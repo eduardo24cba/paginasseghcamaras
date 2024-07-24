@@ -6,11 +6,10 @@ html, body {
     overflow-x: hidden; /*eliminamos el padding de bootstrap sobre el container fluid */
  }
  
-
- /*#listCams{
-   height: 100vh;
- }
- */
+#root{
+   min-height: 100%;
+   margin-bottom: 40px;
+}
  
  .barra{
     background:  #333 !important;
@@ -67,7 +66,7 @@ html, body {
    color: #85EA92 !important;
    text-decoration: none;
  }
- #filtro-aplicado, #filtros, #limpiar-filtros{
+ .filtro{
     color: #fff !important;
     background: #333 !important;
  }
@@ -141,10 +140,11 @@ html, body {
  
   /*   background-size:100% auto; */
   #portada{
-    background-image: url('/static/image/camara_de_seguridad.jpg');
+    background-image: url('/static/camara_de_seguridad.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    height: calc(100vh - 106px);
+    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-size:cover !important;
     -moz-background-size: cover;
@@ -318,11 +318,20 @@ html, body {
      color:#333;
  }
  
- #nav .nav-item > div >a{
+ #nav .nav-item > div > button{
      text-decoration:none;
      font-size: 18px;
+     margin: 0px;
      color: #333355 !important;
  }
+ 
+ /*quitamos el efecto al oprimir el boton*/
+ #nav .nav-item > div > button:active {
+   box-shadow: none!important;
+    outline: 0;
+ }
+
+
  .search-box{
     position: fixed;
     top: 0px;
