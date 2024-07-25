@@ -47,9 +47,9 @@ const NavbarItemsTop = () => {
 
 const NavbarTop = () => {
     return (
-        <div className="col-12">
+        <div className="col-12 position-relative" style={{zIndex:"1000"}}>
             <header className="barra">
-                <nav className="navbar navbar-expand-lg">
+                <nav className="navbar navbar-expand-lg" id="navbarTop">
                     <NavbarItemsTop/>
                 </nav>
             </header>
