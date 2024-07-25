@@ -1,355 +1,357 @@
 html, body {
-    height: 100% !important;
- }
- body{
-    background: #F2F2F2 !important;
-    overflow-x: hidden; /*eliminamos el padding de bootstrap sobre el container fluid */
- }
- 
-#root{
-   min-height: 100%;
-   margin-bottom: 40px;
+height: 100% !important;
 }
- 
- .barra{
-    background:  #333 !important;
- }
- .barra > nav > a > h3{
-    color: #85EA92 !important;
-    margin: 0 30px;
- }
- .barra > form{
-    background: #333 !important;
- }
- 
- #principal{
-    background: #F2F2F2 !important;
- }
- .footer{
-    background-color: #F2F2F2 !important;
-    height: 40px;
- }
- 
- .footer > div > div > div > a{
-    text-decoration: none;
-    margin-left: 30px;
- }
- .facebook-color{
-    color: #3b5998;
- }
- .whatsapp-color{
-    color: #25D366;
- }
- .insta {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    -webkit-background-clip: text;
-    /* Also define standard property for compatibility */
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
- 
- 
-  }
- .cartas {
-    background-color: #333 !important;
-    text-align:center;
- }
- .cartas-footer{
-    color:#fff !important;
-    background-color: #3A3335 !important;
- }
- a[href*="?modelo"]{
-    color: #85EA92 !important;
-    text-decoration: none;
- }
- /*como los links no estan todavia, agregamos esta linea */
- #footer-card > a{
-   color: #85EA92 !important;
-   text-decoration: none;
- }
- .filtro{
-    color: #fff !important;
-    background: #333 !important;
- }
- 
- .titles{
-    color: #333 !important;
- }
- .color-text{
-    color:#333 !important;
- }
- .text-modelo{
-    color:#333 !important;
- }
- .direction{
-    line-height: 12px !important;
- }
- .cam-detail{
-    background-color: #fff !important;
- }
- .links-barra{
-    padding-left:10px;
-    padding-right: 10px;
-    color: rgb(133, 234, 146, 0.5);
-    text-decoration: none;
-    display: inline-block;
- }
- a.links-barra:visited{
-    color: rgb(133, 234, 146, 0.5);
- }
- a.links-barra:hover{
-    color: rgb(133, 234, 146, 0.5);
- }
- a.links-barra:active{
-    color: rgb(133, 234, 146, 0.5);
- }
- /*stackoverflow*/
- ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #333 !important;
-    opacity:  1;
-    text-align: center;
- }
- :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #333 !important;
-    opacity:  1;
-    text-align: center;
- }
- ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #333 !important;
-    opacity:  1;
-    text-align: center;
- }
- :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:    #333 !important;
-    opacity:  1;
-    text-align: center;
- }
- ::-ms-input-placeholder { /* Microsoft Edge */
-    color:    #333 !important;
-    opacity:  1;
-    text-align: center;
- }
- ::placeholder { /* Most modern browsers support this now. */
-    color:    #333 !important;
-    opacity:  1;
-    text-align: center;
- }
- 
- .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgb(133, 234, 146, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
-  }
- 
-  /*   background-size:100% auto; */
-  #portada{
-    background-image: url('https://eduardo24cba.github.io/paginasseghcamaras/static/camara_de_seguridad.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    min-height: 100vh;
-    width: 100%;
-    background-size:cover !important;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    opacity:0.9;
-  }
- 
-  #info{
-    height: auto !important;
-    bottom: 120px;
-  }
- 
-  #info > p{
-    color:#fff !important;
-    display: block;
-    font-size: 50px;
-    font-family: 'Lilita One', cursive;
-    margin-left:15px;
-  }
-  .custom-toggler.navbar-toggler {
-    border-color: #333 !important;
-  }
-  .card-modelo{
-    height: 90px;
-  }
-  .img-responsivess{
-    max-width: 100%;
-    max-height: 300px;
-    height:300px;
-    object-fit: contain;
- }
-  .card-modelo{
-    height: 90px;
-  }
- 
- .float{
-     position:fixed;
-     width:60px;
-     height:60px;
-     bottom:40px;
-     right:40px;
-     background-color:#25d366;
-     color:#FFF;
-     border-radius:50px;
-     text-align:center;
-    font-size:30px;
-     box-shadow: 2px 2px 3px #999;
-    z-index:100;
- }
- 
- .my-float{
-     margin-top:16px;
- }
- 
- #div-contact-title{
-    color:#333;
-    height: 80px;
- }
- 
- #contacto > div > h3{
-    font-family: 'Dancing Script', cursive;
-    font-size: 130px !important;
-    color: #333;
- }
- #contacto > div > div > div > p{
-    font-size: 20px !important;
- }
- #contacto > div > div > div > p >  a{
-    color: #7272AB !important;
-    text-decoration: none !important;
- }
- #contacto > div > div > div > p > span{
-    color: #7272AB !important;
- }
- .sociales{
-    margin:20px;
- }
- .sociales > a{
-    margin:15px;
- }
- 
- #nosotros > div > h3{
-    font-family: 'Dancing Script', cursive;
-    font-size: 130px !important;
-    color: #333;
- }
- #nosotros > div > div > div > p{
-    font-size: 27px !important;
- }
- 
- .img-hover{
-    cursor: pointer;
- }
- 
- .btn-gallery{
-    margin: 0 30px;
-    color: rgb(255, 255, 255);
-    font-size: 30px;
- }
- .btn-close-gallery-desktop{
-    right: 40px;
-    top: 40px;
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-size: 30px;
- }
- 
- .btn-close-gallery-mobile{
-    right: 0px;
-    top: 5px;
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
- }
- .div-gallery{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    z-index: 1100;
- }
- .div-gallery-img{
-    top: 50%;
-    left: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    z-index: 1110;
- }
- 
- .btn-volver{
-    background-color: #333 !important;
-    color:  #fff !important;
-    text-decoration: none;
-    margin:15px 0;
- }
- 
- 
- #share-product > div > button{
-    color: #FF331F;
-    border-color: #FF331F;
-    margin: 0;
- }
- 
- .dropdown-shared{
-    text-decoration: none;
-    padding: 12px;
- }
- 
- .span-close{
-    color:rgb(133, 234, 146, 0.5);
-    transition: opacity 0.5s;
-    opacity: 0;
- }
- .navbar-toggler-icon{
-    transition: opacity 0.5s;
- }
- 
- .share-wtsp{
-    left: 0;
-    width: 100%;
-    bottom: 100px;
- }
- 
- .container-wtsp{
-    right: 20px;
- }
- 
- #nav .navbar-text {
-     color:#333;
- }
- 
- #nav .nav-item > div > button{
-     text-decoration:none;
-     font-size: 18px;
-     margin: 0px;
-     color: #333355 !important;
- }
- 
- /*quitamos el efecto al oprimir el boton*/
- #nav .nav-item > div > button:active {
-   box-shadow: none!important;
-    outline: 0;
- }
+body{
+background: #F2F2F2 !important;
+overflow-x: hidden; /*eliminamos el padding de bootstrap sobre el container fluid */
+}
+
+#root{
+min-height: 100%;
+margin-bottom: 40px;
+}
+
+.barra{
+background:  #333 !important;
+}
+.barra > nav > a > h3{
+color: #85EA92 !important;
+margin: 0 30px;
+}
+.barra > form{
+background: #333 !important;
+}
+
+#principal{
+background: #F2F2F2 !important;
+}
+.footer{
+background-color: #F2F2F2 !important;
+height: 40px;
+}
+
+.footer > div > div > div > a{
+text-decoration: none;
+margin-left: 30px;
+}
+.facebook-color{
+color: #3b5998;
+}
+.whatsapp-color{
+color: #25D366;
+}
+.insta {
+background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+-webkit-background-clip: text;
+/* Also define standard property for compatibility */
+background-clip: text;
+-webkit-text-fill-color: transparent;
 
 
- .search-box{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    z-index: 1400;
-    background-color: #333;
-    opacity: 0.5;
- }
- .child-search-box{
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    z-index: 1500;
-    background-color:  #333;
- }
- #search-box > i{
-    cursor: pointer;
- }
+}
+.cartas {
+background-color: #333 !important;
+text-align:center;
+}
+.cartas-footer{
+color:#fff !important;
+background-color: #3A3335 !important;
+}
+a[href*="?modelo"]{
+color: #85EA92 !important;
+text-decoration: none;
+}
+/*como los links no estan todavia, agregamos esta linea */
+#footer-card > a{
+color: #85EA92 !important;
+text-decoration: none;
+}
+.filtro{
+color: #fff !important;
+background: #333 !important;
+}
+
+.titles{
+color: #333 !important;
+}
+.color-text{
+color:#333 !important;
+}
+.text-modelo{
+color:#333 !important;
+}
+.direction{
+line-height: 12px !important;
+}
+.cam-detail{
+background-color: #fff !important;
+}
+.links-barra{
+padding-left:10px;
+padding-right: 10px;
+color: rgb(133, 234, 146, 0.5);
+text-decoration: none;
+display: inline-block;
+}
+a.links-barra:visited{
+color: rgb(133, 234, 146, 0.5);
+}
+a.links-barra:hover{
+color: rgb(133, 234, 146, 0.5);
+}
+a.links-barra:active{
+color: rgb(133, 234, 146, 0.5);
+}
+/*stackoverflow*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+color:    #333 !important;
+opacity:  1;
+text-align: center;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color:    #333 !important;
+opacity:  1;
+text-align: center;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color:    #333 !important;
+opacity:  1;
+text-align: center;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color:    #333 !important;
+opacity:  1;
+text-align: center;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+color:    #333 !important;
+opacity:  1;
+text-align: center;
+}
+::placeholder { /* Most modern browsers support this now. */
+color:    #333 !important;
+opacity:  1;
+text-align: center;
+}
+
+.custom-toggler .navbar-toggler-icon {
+background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgb(133, 234, 146, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
+}
+
+/*   background-size:100% auto; */
+#portada{
+background-image: url('https://eduardo24cba.github.io/paginasseghcamaras/static/camara_de_seguridad.jpg');
+background-repeat: no-repeat;
+background-position: 75% 25%;
+height: 100%;
+min-height: 100vh;
+width: 100%;
+background-size:cover !important;
+-moz-background-size: cover;
+-o-background-size: cover;
+-webkit-background-size: cover;
+opacity:0.9;
+top: 0;
+left: 0;
+}
+
+#info{
+height: auto !important;
+bottom: 120px;
+}
+
+#info > p{
+color:#fff !important;
+display: block;
+font-size: 50px;
+font-family: 'Lilita One', cursive;
+margin-left:15px;
+}
+.custom-toggler.navbar-toggler {
+border-color: #333 !important;
+}
+.card-modelo{
+height: 90px;
+}
+.img-responsivess{
+max-width: 100%;
+max-height: 300px;
+height:300px;
+object-fit: contain;
+}
+.card-modelo{
+height: 90px;
+}
+
+.float{
+ position:fixed;
+ width:60px;
+ height:60px;
+ bottom:40px;
+ right:40px;
+ background-color:#25d366;
+ color:#FFF;
+ border-radius:50px;
+ text-align:center;
+font-size:30px;
+ box-shadow: 2px 2px 3px #999;
+z-index:100;
+}
+
+.my-float{
+ margin-top:16px;
+}
+
+#div-contact-title{
+color:#333;
+height: 80px;
+}
+
+#contacto > div > h3{
+font-family: 'Dancing Script', cursive;
+font-size: 130px !important;
+color: #333;
+}
+#contacto > div > div > div > p{
+font-size: 20px !important;
+}
+#contacto > div > div > div > p >  a{
+color: #7272AB !important;
+text-decoration: none !important;
+}
+#contacto > div > div > div > p > span{
+color: #7272AB !important;
+}
+.sociales{
+margin:20px;
+}
+.sociales > a{
+margin:15px;
+}
+
+#nosotros > div > h3{
+font-family: 'Dancing Script', cursive;
+font-size: 130px !important;
+color: #333;
+}
+#nosotros > div > div > div > p{
+font-size: 27px !important;
+}
+
+.img-hover{
+cursor: pointer;
+}
+
+.btn-gallery{
+margin: 0 30px;
+color: rgb(255, 255, 255);
+font-size: 30px;
+}
+.btn-close-gallery-desktop{
+right: 40px;
+top: 40px;
+position: absolute;
+color: rgb(255, 255, 255);
+font-size: 30px;
+}
+
+.btn-close-gallery-mobile{
+right: 0px;
+top: 5px;
+position: absolute;
+color: rgb(255, 255, 255);
+font-size: 20px;
+}
+.div-gallery{
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100vh;
+z-index: 1100;
+}
+.div-gallery-img{
+top: 50%;
+left: 50%;
+position: fixed;
+transform: translate(-50%, -50%);
+z-index: 1110;
+}
+
+.btn-volver{
+background-color: #333 !important;
+color:  #fff !important;
+text-decoration: none;
+margin:15px 0;
+}
+
+
+#share-product > div > button{
+color: #FF331F;
+border-color: #FF331F;
+margin: 0;
+}
+
+.dropdown-shared{
+text-decoration: none;
+padding: 12px;
+}
+
+.span-close{
+color:rgb(133, 234, 146, 0.5);
+transition: opacity 0.5s;
+opacity: 0;
+}
+.navbar-toggler-icon{
+transition: opacity 0.5s;
+}
+
+.share-wtsp{
+left: 0;
+width: 100%;
+bottom: 100px;
+}
+
+.container-wtsp{
+right: 20px;
+}
+
+#nav .navbar-text {
+ color:#333;
+}
+
+#nav .nav-item > div > button{
+ text-decoration:none;
+ font-size: 18px;
+ margin: 0px;
+ color: #333355 !important;
+}
+
+/*quitamos el efecto al oprimir el boton*/
+#nav .nav-item > div > button:active {
+box-shadow: none!important;
+outline: 0;
+}
+
+
+.search-box{
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100vh;
+z-index: 1400;
+background-color: #333;
+opacity: 0.5;
+}
+.child-search-box{
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100vh;
+z-index: 1500;
+background-color:  #333;
+}
+#search-box > i{
+cursor: pointer;
+}
