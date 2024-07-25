@@ -60,7 +60,7 @@
        height:100%;
     }
     #portada{
-      background-image: url('/static/image/camara_de_seguridad_m_query.jpg');
+      background-image: url('https://eduardo24cba.github.io/paginasseghcamaras/static/camara_de_seguridad_m_query.jpg');
     }
 
 }
