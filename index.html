@@ -79,13 +79,20 @@
       </div>
     </footer>
     <script>
-      let hide = () => {
-        let footer = document.getElementById("footer")
-        if(document.location.href === "http://127.0.0.1:5500/"){
+      const urls = ["https://eduardo24cba.github.io/paginasseghcamaras/#/productos",
+                    "https://eduardo24cba.github.io/paginasseghcamaras/#/nosotros",
+                    "https://eduardo24cba.github.io/paginasseghcamaras/#/contacto"
+                   ]
+        window.navigation.addEventListener("navigate", (event) => {
+        if(urls.some(s => s.search(event.destination.url))){
+          footer.classList.remove("d-none")
+          footer.classList.add("footer")
+        }
+        else{
           footer.classList.remove("footer")
           footer.classList.add("d-none")
         }
-      }
+        })
     </script>
 </body>
 </html>
