@@ -79,20 +79,18 @@
       </div>
     </footer>
     <script>
-      const urls = ["https://eduardo24cba.github.io/paginasseghcamaras/#/productos",
-                    "https://eduardo24cba.github.io/paginasseghcamaras/#/nosotros",
-                    "https://eduardo24cba.github.io/paginasseghcamaras/#/contacto"
-                   ]
-        window.navigation.addEventListener("navigate", (event) => {
-        if(urls.some(s => s.search(event.destination.url))){
-          footer.classList.remove("d-none")
-          footer.classList.add("footer")
-        }
-        else{
-          footer.classList.remove("footer")
-          footer.classList.add("d-none")
-        }
+      //overloap footer main page
+      const urls = ["productos",
+                    "nosotros",
+                    "contacto"]
+      const footer = document.getElementById("footer")
+      window.navigation.addEventListener("navigate", (event) => {
+        if(!(urls.find(s => event.destination.url.includes(s)) !== undefined)){footer.classList.add("overloap")}
+        else{if(footer.classList.length > 1)footer.classList.remove("overloap")}
         })
+      window.addEventListener("DOMContentLoaded", (event) => {
+          if(!urls.some( s => window.location.href.includes(s)))footer.classList.add("overloap")
+      })
     </script>
 </body>
 </html>
