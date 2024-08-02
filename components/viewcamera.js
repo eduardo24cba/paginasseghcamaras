@@ -4,13 +4,9 @@ const CardCamara = ({camara}) => {
     return(
         <div className="container">
             <div className="row mt-5">
-                <div className="col-lg-8">
-                    <span className="d-md-block d-md-none position-absolute m-3" style={{"fontWeight": "bold"}}>1 / 2</span>
+                <div className="col-lg-8 mb-8">
                       <div className="d-flex container justify-content-center">
                           <img src={camara.imagenes[0]} alt="" />
-                      </div>
-                      <div className="mx-auto d-none d-md-block mt-4 border-0">
-                          <img src={camara.imagenes[0]} style={{"width":"100px", "height": "100px"}} className="img-thumbnail" alt=""/>
                       </div>
                 </div>
                   
