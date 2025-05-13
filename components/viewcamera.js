@@ -6,7 +6,7 @@ const CardCamara = ({camara}) => {
             <div className="row mt-5">
                 <div className="col-lg-8 mb-8">
                       <div className="d-flex container justify-content-center">
-                          <img src={camara.imagenes[0]} alt="" />
+                          <img src={camara.imagenes[0]} alt={camara.modelo} />
                       </div>
                 </div>
                   
