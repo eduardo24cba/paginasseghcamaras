@@ -388,6 +388,7 @@ cursor: pointer;
  }
  to {
   transform: translateX(20%)
+ }
 }
 
 @keyframes move-wtsp {
