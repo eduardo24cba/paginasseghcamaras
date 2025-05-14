@@ -172,7 +172,9 @@ display: block;
 font-size: 50px;
 font-family: 'Lilita One', cursive;
 margin-left:15px;
+animation: move-text 2.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) both; 
 }
+
 .custom-toggler.navbar-toggler {
 border-color: #333 !important;
 }
@@ -390,3 +392,11 @@ cursor: pointer;
   transform: translateX(-230px);
  }
 }
+
+@keyframes move-text {
+ from{
+  transform:translateX(-100%)
+ }
+ to {
+  transform: translateX(20%)
+ }
