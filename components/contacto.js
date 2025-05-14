@@ -15,7 +15,7 @@ const Contacto = () => {
                     </p>
                 </div>
                 <div className="col-sm-12 col-lg-6 mt-2 text-center">
-                    <i className="fa fa-envelope fa-4x" aria-hidden="true"></i>
+                    <i className="fa fa-envelope fa-5x" aria-hidden="true"></i>
                     <p>Por e-mail</p>
                     <p>
                         Escribanos a
