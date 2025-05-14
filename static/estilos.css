@@ -23,9 +23,7 @@ background: #333 !important;
 }
 
 .overloap{
-   position: absolute;
-   top: 0;
-   left: 0;
+   display:none;
 }
 
 #principal{
@@ -394,5 +392,18 @@ cursor: pointer;
 @keyframes move-wtsp {
  50% {
    transform: translateY(10px);
+ }
+}
+
+header{
+ animation: slide-down 2s linear infinite;
+}
+
+@keyframes slide-down{
+ from {
+  transform: translateY(-100%)
+ }
+ to {
+  transform: translateY(0)
  }
 }
