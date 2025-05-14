@@ -396,7 +396,7 @@ cursor: pointer;
 }
 
 header{
- animation: slide-down 2s linear infinite;
+ animation: slide-down 2s linear both;
 }
 
 @keyframes slide-down{
