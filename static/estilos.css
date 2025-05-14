@@ -318,6 +318,7 @@ transition: opacity 0.5s;
 left: 0;
 width: 100%;
 bottom: 100px;
+animation: move-wtsp 2s linear infinite;
 }
 
 .container-wtsp{
@@ -367,9 +368,9 @@ cursor: pointer;
 #listCams div div{
  animation: images linear both;
  animation-timeline: view();
- animation-range: entry 20% cover 30%;
- 
+ animation-range: entry 20% cover 30%; 
 }
+
 @keyframes images{
  from{
   opacity:.4;
@@ -379,19 +380,6 @@ cursor: pointer;
  }
 }
 
-#navbarTop h3{
- animation: titulo linear both;
- animation-timeline: scroll(root block);
- animation-range: 0 100px;
-}
-
-@keyframes titulo {
- from{
- }
- to{
-  transform: translateX(-230px);
- }
-}
 
 @keyframes move-text {
  from{
@@ -399,4 +387,10 @@ cursor: pointer;
  }
  to {
   transform: translateX(20%)
+}
+
+@keyframes move-wtsp {
+ 50% {
+   transform: translateY(10px);
  }
+}
