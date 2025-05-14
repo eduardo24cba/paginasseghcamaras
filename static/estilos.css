@@ -223,13 +223,14 @@ color: #333;
 #contacto > div > div > div > p{
 font-size: 20px !important;
 }
-#contacto > div > div > div > p >  a{
-color: #7272AB !important;
+#contacto  a{
+color: #F61067 !important;
 text-decoration: none !important;
 }
-#contacto > div > div > div > p > span{
-color: #7272AB !important;
+#contacto span{
+color: #F61067 !important;
 }
+
 .sociales{
 margin:20px;
 }
